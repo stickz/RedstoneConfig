@@ -23,3 +23,4 @@ jobs:
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: ~/serverfiles/nucleardawn/
           source-path: ./redstone/
+          rsync-options: --archive --verbose --human-readable
