@@ -24,3 +24,13 @@ jobs:
           destination-path: ~/serverfiles/nucleardawn/
           source-path: ./redstone/
           rsync-options: --archive --verbose --human-readable
+          
+      - name: 📂 Sync Redstone OVH
+        uses: SamKirkland/web-deploy@v1
+        with:
+          target-server: 147.135.130.229
+          remote-user: ndserver
+          private-ssh-key: ${{ secrets.SSH_KEY }}
+          destination-path: ~/serverfiles/nucleardawn/
+          source-path: ./redstone/
+          rsync-options: --archive --verbose --human-readable
